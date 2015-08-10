@@ -2,19 +2,30 @@ import java.io.Console;
 import java.util.ArrayList;
 
 public class PingPong {
-  public static void main(String[] args) {
-     Console myConsole = System.console();
-     System.out.println("Enter a number");
-     String userNum = myConsole.readLine();
+  public static void main(String[] args) {}
+    //  Console myConsole = System.console();
+    //  System.out.println("Enter a number");
+    //  String userNum = myConsole.readLine();
+    //  System.out.println("enter a number");
+
+
+
+
+  public Boolean isNumber(String userNum) {
+      Integer userInput = 0;
+      try {
+    userInput = Integer.parseInt(userNum);
+        if (userInput <0) {
+            return false;
+        }
+    } catch (NumberFormatException e) {
+        return false;
+    }
+    return true;
   }
 
-  if (x == int(userNum)) {
-
-  }
-  public ArrayList pingPong (Integer number) {
-     Integer iNum = number;
+  public ArrayList pingPong (Integer iNum) {
      ArrayList<String> numList = new ArrayList<String>();
-
 
       for ( int i = 1; i <= iNum; i++ ) {
           if (i % 15 == 0){

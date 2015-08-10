@@ -13,6 +13,14 @@ public class PingPongTest {
     }
 
     @Test
+    public void pingPong_isUserNumInt_true() {
+        PingPong testPingPong = new PingPong();
+        String userNum = "a";
+        assertEquals(false, testPingPong.isNumber(userNum));
+    }
+
+
+    @Test
     public void pingPong_ifDivisibleby15_PingPong_true() {
         PingPong testPingPong = new PingPong();
         ArrayList<String> testArray = new ArrayList<String>();
@@ -77,11 +85,11 @@ public class PingPongTest {
         testArray.add("ping pong");
         assertEquals(testArray, testPingPong.pingPong(15));
     }
-
-    @Test
-     public void pingPong_ifInteger_false(); {
-        PingPong testPingPong = new PingPong();
-        String notNum = "Enter a number";
-        assertEquals(notNum, testPingPong.pingPong("r"));
-    }
+    //
+    // @Test
+    //  public void pingPong_ifInteger_false(); {
+    //     PingPong testPingPong = new PingPong();
+    //     String notNum = "Enter a number";
+    //     assertEquals(notNum, testPingPong.pingPong("r"));
+    // }
 }
